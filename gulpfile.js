@@ -45,8 +45,8 @@ const paths = {
         watch: './src/css-plugins/**/*'
     },
     js: {
-        src: ['./src/js/libraries/**/*.js', './src/blocks/**/*.js', './src/sections/**/*.js', './src/js/custom/**/*.js', 'node_modules/svgxuse/svgxuse.min.js'],
-        dest: './build/js',
+        src: ['./src/js/libraries/**/*.js', 'node_modules/svgxuse/svgxuse.min.js', './src/js/custom/**/*.js', './src/blocks/**/*.js', './src/sections/**/*.js'],
+        dest: './build/wp-content/themes/twentytwenty-child/js',
         watch: ['./src/js/libraries/**/*.js', './src/js/custom/**/*.js', './src/blocks/**/*.js', './src/sections/**/*.js',]
     },
     jsPlugins: {
@@ -388,7 +388,7 @@ gulp.task('server', () => {
 /* PROJECT TASK BUILD QUEUE */
 
 gulp.task('build', gulp.series(
-    //'clean',
+    'clean',
     'html',
     'styles',
     'cssPlugins',
